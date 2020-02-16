@@ -1,0 +1,52 @@
+{
+  "name": "jobsearch",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": {
+    "name": "Piyali Das",
+    "email": "piyalidas.it@gmail.com"
+  },
+  "description": "Job search",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piyalidas10/"
+  },
+  "contributors": [
+    "piyali das <piyalidas.it@gmail.com>"
+  ],
+  "homepage": "http://localhost:3000",
+  "keywords": [
+    "jobsearch",
+    "nodejs",
+    "application"
+  ],
+  "engines": {
+    "node": ">= 10.15.3",
+    "npm": ">= 6.4.1"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "dependencies": {
+    "core-js": "^2.5.4",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "helmet": "^3.21.0",
+    "nodemon": "^2.0.2",
+    "npm": "^6.8.0",
+    "pug": "^2.0.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "~8.9.4",
+    "nodemon": "^2.0.2"
+  }
+}

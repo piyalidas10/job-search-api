@@ -1,0 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.jobpage{
+    margin: 2rem auto;
+}
+.searchbox{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.searchbox1{
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.searchUrl{
+    border-bottom: 1px #DDD solid;
+    padding-top: 20px;
+}
+.searchUrl ul {
+    margin: 0;
+    padding: 0;
+}
+.searchUrl ul li {
+    padding: 10px 15px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.searchUrl ul li a{
+    display: block;
+    text-decoration: none;
+}
+.searchUrl ul li.active::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    background: #0000FF;
+}
+.jobResultsSec{
+}
+.jobResult{
+    margin-top: 20px;
+    border-bottom: 1px #DDD solid;
+    padding-bottom: 20px;
+}
+.jobError{
+    margin-top: 20px;
+    padding-bottom: 20px;
+}

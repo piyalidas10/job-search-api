@@ -1,0 +1,71 @@
+<%- include('includes/header.ejs') %>
+    <div class="container">
+        <form action="/search/<%= jobSites[0].siteName %>?url=<%= jobSites[0].siteName %>" method="POST">
+            <div class="row searchbox1">
+                <div class="col-lg-9 col-md-8 col-sm-12">
+                    <input type="text" class="form-control search-slt" value="<%= userValue %>" placeholder="Enter Job Title" name="jobtitle">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <button type="submit" class="btn btn-block btn-success">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="searchUrl">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul id="siteurls">
+                        <% for(var i=0; i<jobSites.length; i++) { %>
+                            <li class="<%= paramData === jobSites[i].siteName ? 'active' : '' %>">
+                                <a href="/search/<%= jobSites[i].siteName %>?url=<%= jobSites[i].siteName %>&jobtitle=<%= userValue %>" aria-label="<%= jobSites[i].siteName %>">
+                                    <%= jobSites[i].siteName %>
+                                </a>
+                            </li>
+                            <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% if(data !== '' && errorbody === '') { %>
+        <div class="jobResultsSec">
+            <div class="container">
+                <div class="row">
+                    <% for(var i=0; i<data.length; i++) { %>
+                        <div class="col-12 jobResult">
+                            <h4>
+                                <%= data[i].title %>
+                            </h4>
+                            <h5>
+                                <%= data[i].company %>
+                            </h5>
+                            <ul>
+                                <li>
+                                    <%= data[i].type %>
+                                </li>
+                                <li>
+                                    <%= data[i].location %>
+                                </li>
+                            </ul>
+                            <div>
+                                <%= data[i].description %>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+            </div>
+        </div>
+        <% } %>
+            <% if(errorbody !== '') { %>
+                <div class="jobError">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                        <h5><%= errorbody %></h5>
+                                </div>
+                            </div>
+                        </div>
+                </div>                
+                <% } %>
+                    <%- include('includes/footer.ejs') %>

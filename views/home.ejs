@@ -1,0 +1,17 @@
+<%- include('includes/header.ejs') %>
+
+    <div class="container jobpage">
+        <h1 class="text-center">Job Search</h1>
+        <form action="/search/<%= searchUrl %>?url=<%= searchUrl %>" method="POST">
+            <div class="row searchbox">
+                <div class="col-lg-9 col-md-8 col-sm-12">
+                    <input type="text" class="form-control search-slt" placeholder="Enter Job Title" name="jobtitle">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <button type="submit" class="btn btn-block btn-success">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <%- include('includes/footer.ejs') %>
