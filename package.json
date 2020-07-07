@@ -40,7 +40,7 @@
     "express-handlebars": "^3.1.0",
     "helmet": "^3.21.0",
     "nodemon": "^2.0.2",
-    "npm": "^6.8.0",
+    "npm": "^6.14.6",
     "pug": "^2.0.4",
     "request": "^2.88.0",
     "request-promise": "^4.2.5"
